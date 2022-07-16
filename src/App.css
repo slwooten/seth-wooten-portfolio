@@ -1,38 +1,205 @@
-.App {
+@font-face {
+  font-family: 'Vu';
+  src: local('DejaVu'),
+  url('./fonts/DejaVu.ttf') format('truetype');
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --MainBG: rgb(13,17,24);
+  --HeaderBG: rgb(22,26,34);
+  --HeaderText: rgb(240,246,252);
+  --HeaderTextHover: rgb(226,232,238);
+  --CardHeaderText: rgb(201,209,217);
+  --CardBorder: rgb(135,144,154);
+  --StandardBtn: rgb(33,38,45);
+  --ActionBtn: rgb(36,134,54);
+  --Hyperlink: rgb(88,166,255);
+}
+
+.app {
+  background-color: var(--MainBG);
+}
+
+/* HEADER AND NAVBAR /////////////////////////////////*/
+header {
+  background-color: var(--HeaderBG);
+  color: var(--HeaderText);
+  font-family: 'Vu';
+  padding: 1.5rem;
+  position: sticky; top: 0;
+}
+
+navbar {
+  display: flex;
+  justify-content: space-between;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav-projects {
+  justify-content: flex-end;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+navbar a {
+  text-decoration: none;
+  color: var(--HeaderText);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+navbar a:hover{
+  color: var(--HeaderTextHover);
+  cursor: pointer;
+}
+
+/* PROFILE SECTION /////////////////////////////////*/
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  border-bottom: var(--CardBorder) 1px solid;
+}
+
+.profile-pic {
+  padding: 1rem;
+}
+
+.name-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color: var(--HeaderText);
 }
 
-.App-link {
-  color: #61dafb;
+.name-text {
+  width: 11ch;
+  animation: typing 2s steps(11), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 3rem;
 }
 
-@keyframes App-logo-spin {
+@keyframes typing {
   from {
-    transform: rotate(0deg);
+    width: 0;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
   }
+}
+
+.job-text {
+  font-family: monospace;
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+.links {
+  font-family: 'Vu';
+}
+
+.links h2 {
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+
+.links a {
+  text-decoration: none;
+  color: var(--Hyperlink);
+}
+
+.links a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.profile-pic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: var(--CardBorder) 1px solid;
+  border-radius: 50%;
+  background-color: var(--HeaderBG);
+  margin-bottom: 1.5rem;
+}
+
+/* PROJECTS SECTION ///////////////////////////////// */
+.projects-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+
+/* PROJECT CARDS //////////////////////////////////// */
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem;
+  margin: 1rem;
+  color: var(--CardHeaderText);
+  font-family: 'Vu';
+  border: var(--CardBorder) 1px solid;
+  background-color: var(--HeaderBG);
+}
+
+.card img {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.card h1 {
+  text-align: center;
+}
+
+.left-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  flex: 1 1 15rem;
+}
+
+.right-content {
+  flex: 1 1 15rem;
+}
+
+.project-img {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 1rem;
+}
+
+.project-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+
+.card h3 {
+  font-size: 1.4rem;
+  padding: .5rem;
+}
+
+.project-text p {
+  padding: .5rem;
 }
