@@ -1,10 +1,11 @@
 import React from 'react'
 import ProjectCard from '../components/ProjectCard';
 
+
 const projects = [
   {
     name: 'Pixel Mixup',
-    img: 'https://via.placeholder.com/200',
+    description: 'Description here',
     liveLink: 'google.com',
     githubLink: 'google.com',
     techs: [
@@ -29,7 +30,7 @@ const projects = [
   },
   {
     name: 'Live Weather Dashboard',
-    img: 'https://via.placeholder.com/200',
+    description: 'Description here',
     liveLink: 'google.com',
     githubLink: 'google.com',
     techs: [
@@ -49,7 +50,7 @@ const projects = [
   },
   {
     name: 'Work Day Scheduler',
-    img: 'https://via.placeholder.com/200',
+    description: 'Description here',
     liveLink: 'google.com',
     githubLink: 'google.com',
     techs: [

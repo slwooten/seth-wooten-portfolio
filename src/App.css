@@ -9,6 +9,10 @@
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --MainBG: rgb(13,17,24);
   --HeaderBG: rgb(22,26,34);
@@ -61,7 +65,6 @@ navbar a:hover{
   justify-content: center;
   align-items: center;
   padding: 2rem;
-  border-bottom: var(--CardBorder) 1px solid;
 }
 
 .profile-pic {
@@ -157,6 +160,7 @@ navbar a:hover{
   font-family: 'Vu';
   border: var(--CardBorder) 1px solid;
   background-color: var(--HeaderBG);
+  flex: 1 1 40rem;
 }
 
 .card img {
@@ -201,5 +205,32 @@ navbar a:hover{
 }
 
 .project-text p {
+  padding: .5rem;
+}
+
+.project-text a {
+  text-decoration: none;
+  color: var(--Hyperlink);
+}
+
+.project-text a:hover {
+  text-decoration: underline;
+}
+
+.green {
+  color: var(--ActionBtn);
+}
+
+.projects-header {
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+#Projects {
+  color: var(--HeaderText);
+  font-family: 'Vu';
+}
+
+.right-content p {
   padding: .5rem;
 }
